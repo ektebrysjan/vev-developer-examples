@@ -8,10 +8,10 @@ type Props = {
 
 const MyComponent = ({ name = 'Light Sand', color = "#e8ded4" }: Props) => {
   return (
-    <div style={{backgroundColor: color, height: '100%', minHeight: '100%' }} title={name}>
+    <div style={{ backgroundColor: color, height: '100%', minHeight: '100%' }} title={name}>
       <span>{name}</span>
       <span>↓</span>
-      <div className={styles.group} style={{padding: 20}}>
+      <div className={styles.group} style={{ padding: 20 }}>
         <span>HEX</span>
         <span>{color}</span>
       </div>
@@ -33,7 +33,7 @@ const MyComponent = ({ name = 'Light Sand', color = "#e8ded4" }: Props) => {
 
 registerVevComponent(MyComponent, {
   name: "Color",
-  props: [{ name: "name", type: "string", initialValue: "Light Sand" }, { name: 'color', type: 'string', initialValue: '#e8ded4'}],
+  props: [{ name: "name", type: "string", initialValue: "Light Sand" }, { name: 'color', type: 'string', initialValue: '#e8ded4' }],
 });
 
 export default MyComponent;
