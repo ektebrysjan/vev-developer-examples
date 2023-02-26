@@ -1,0 +1,14 @@
+.wrapper {
+  height: 100%;
+  background: pink;
+  padding: 2rem;
+}
+.debugger {
+  padding: 5px;
+  font-size: 1.5em;
+  color: #FFFF;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "vev-logo-four",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "login": "vev login",
+    "init": "vev init",
+    "start": "vev start"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.19",
+    "prettier": "2.7.0",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.7.3",
+    "@vev/react": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.144.0"
+  }
+}

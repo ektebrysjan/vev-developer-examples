@@ -1,0 +1,22 @@
+{
+  "name": "michael-element",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "login": "vev login",
+    "init": "vev init",
+    "start": "vev start"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "^18.0.6",
+    "prettier": "2.7.0",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "dependencies": {
+    "@vev/react": "latest",
+    "react": "latest",
+    "react-dom": "^18.2.0"
+  }
+}

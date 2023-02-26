@@ -1,0 +1,16 @@
+.audioGenerate {
+    display: flex;
+    flex-direction: column;
+}
+.inputText {
+    background-color: #333 !important;
+}
+.button {
+    padding: 1  0px 5px;
+    color: #efd1de;
+    background: #4c1726;
+}
+.voiceInfo {
+    display: flex;
+    flex-direction: column;
+}

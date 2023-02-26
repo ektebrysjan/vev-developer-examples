@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.background-selector-1 {
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+.background-selector-2 {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  width: 50%;
+  height: 50%;
+}
+.background-selector-3 {
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
+  width: 50%;
+  height: 50%;
+}
+.background-selector-4 {
+  background: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+  width: 50%;
+  height: 50%;
+}
+
+.background-selector-5 {
+  height: 100%;
+  background:radial-gradient(circle farthest-side, #fceabb, #f8b500);
+  padding: 2rem;
+}

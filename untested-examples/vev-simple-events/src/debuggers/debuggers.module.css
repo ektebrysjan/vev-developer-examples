@@ -1,0 +1,9 @@
+.performance {
+    display: flex;
+    flex-direction: row;
+}
+.altDebugger {
+    background-color: #000;
+    height: 100%;
+    padding: 5px;
+}

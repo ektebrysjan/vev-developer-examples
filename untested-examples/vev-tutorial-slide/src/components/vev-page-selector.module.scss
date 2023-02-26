@@ -1,0 +1,32 @@
+.label {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px dashed white;
+    color: white;
+    gap: 8px;
+  
+    &:focus-within {
+      border-color: var(--color-brand-secondary-spark);
+      color: var(--color-brand-secondary-spark);
+      filter: drop-shadow(0 0 2px var(--color-brand-secondary-spark));
+    }
+  
+    &.dragOver {
+      border-color: var(--color-brand-primary-soft);
+      color: var(--color-brand-primary-soft);
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  
+    h3 {
+      margin: 0;
+    }
+  }

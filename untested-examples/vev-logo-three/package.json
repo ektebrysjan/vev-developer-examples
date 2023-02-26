@@ -1,0 +1,20 @@
+{
+  "name": "vev-logo-three",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "login": "vev login",
+    "init": "vev init",
+    "start": "vev start"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "2.7.0",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.7.0",
+    "@vev/react": "^0.0.1-alpha.13",
+    "three": "^0.144.0"
+  }
+}

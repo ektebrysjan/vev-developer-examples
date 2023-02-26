@@ -1,0 +1,22 @@
+{
+  "name": "simple-maps-example",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "login": "vev login",
+    "init": "vev init",
+    "start": "vev start"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/google-map-react": "^2.1.7",
+    "@types/react": "latest",
+    "prettier": "2.7.0",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "dependencies": {
+    "@vev/react": "latest",
+    "google-map-react": "^2.2.0",
+    "react": "latest"
+  }
+}

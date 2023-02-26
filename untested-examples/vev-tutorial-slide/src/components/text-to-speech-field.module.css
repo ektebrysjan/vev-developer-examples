@@ -1,0 +1,21 @@
+.textToSpeechField {
+    border: 1px solid #4c1726;
+    background:  transparent;
+}
+.inputText {
+    background-color: #333 !important;
+    color: #FFF;
+    width: 100%;
+    padding: 10px 10px;
+}
+.button {
+    padding: 1  0px 5px;
+    color: #efd1de;
+    background: #4c1726;
+}
+.playButton {
+    fill: #000;
+    color: #FFF;
+    width: 20px;
+    height: 20px;
+}

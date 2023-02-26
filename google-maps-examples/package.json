@@ -1,0 +1,21 @@
+{
+  "name": "vev-test-element",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "login": "vev login",
+    "init": "vev init",
+    "start": "vev start"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "latest",
+    "prettier": "2.7.0",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "dependencies": {
+    "@vev/react": "latest",
+    "google-map-react": "^2.2.0",
+    "react": "latest"
+  }
+}
