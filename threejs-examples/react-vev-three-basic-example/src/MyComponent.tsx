@@ -4,13 +4,19 @@ import * as THREE from 'three';
 import { OrbitControls } from './orbit-controls'
 import { GLTFLoader } from './gltf-loader';
 import { AnimationClip, VectorKeyframeTrack, NumberKeyframeTrack } from "three";
+import SchemaFileField from "./form/SchemaFileField";
 
 import { registerVevComponent } from "@vev/react";
 
 type Props = {
-  title: string;
-};
+  schemaFile: {
+    name?: string;
+    url?: string;
+    dynamicUrl?: string;
+  },
+  showCube: boolean;
 
+};
 // Using this as the style for the root element of the default export
 // to make it take up the same size and position as it is given in Vev
 const canvasStyle = { width: '100%', height: '100%', backgroundColor: 'indigo' }
@@ -20,7 +26,7 @@ const loader = new GLTFLoader();
 
 
 
-const MyThreeComponent = ({ title = "Vev", url = 'https://cdn.vev.design/private/b8EJjK6PvUOw7TWBLQYJJk2cwb23/nQyoB9i08w_zpZwD0FwzC_vev-logo.gltf.gltf.gltf', showCube }: Props) => {
+const MyThreeComponent = ({ title = "Vev", uploadFile = 'https://cdn.vev.design/private/b8EJjK6PvUOw7TWBLQYJJk2cwb23/nQyoB9i08w_zpZwD0FwzC_vev-logo.gltf.gltf.gltf', showCube }: Props) => {
   /*
     ThreeJS needs a Canvas to render to, and we need to make sure
     we don't lose the reference to this element.
@@ -164,9 +170,9 @@ const MyThreeComponent = ({ title = "Vev", url = 'https://cdn.vev.design/private
    * of having to refer to the GLTF file directly in the code.
    */
   useEffect(() => {
-    if (rendererRef.current && sceneRef.current && url) {
-      console.log("Loading GLTF file", url);
-      loader.load(url, function (res) {
+    if (rendererRef.current && sceneRef.current && uploadFile.url) {
+      console.log("Loading GLTF file", uploadFile);
+      loader.load(uploadFile.url, function (res) {
         console.log("Successfully loaded the GLTF file", res);
         sceneRef.current.add(res.scene);
         const { scene } = res;
@@ -178,7 +184,7 @@ const MyThreeComponent = ({ title = "Vev", url = 'https://cdn.vev.design/private
         console.error("Something went wrong loading the GLTF file", err)
       });
     }
-  }, [url, sceneRef, rendererRef])
+  }, [uploadFile, sceneRef, rendererRef])
 
   return (
     <canvas style={canvasStyle} ref={canvasRef}>
@@ -189,7 +195,7 @@ const MyThreeComponent = ({ title = "Vev", url = 'https://cdn.vev.design/private
 registerVevComponent(MyThreeComponent, {
   name: "My Three Component",
   type: 'both',
-  props: [{ type: 'string', name: 'url' }, {type: 'boolean', name: 'showCube', description: 'Show the cube', initialValue: true}],
+  props: [{type: 'string', name: 'uploadFile', component: SchemaFileField }, {type: 'boolean', name: 'showCube', description: 'Show the cuube', initialValue: true}], 
   editableCSS: [],
 });
 
